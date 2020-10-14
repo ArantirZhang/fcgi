@@ -91,6 +91,7 @@ set ( SRC ${SRC} libfcgi/fcgi_stdio.c libfcgi/fcgiapp.c libfcgi/fcgio.cpp )
 include_directories ( include )
 add_library ( fcgi ${SRC} )
 target_link_libraries( fcgi ${LIB_SOCKET} )
+target_include_directories( fcgi PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include )
 
 install_library ( fcgi )
 install_data ( LICENSE.TERMS )
